@@ -3,12 +3,12 @@ $:.push File.expand_path("../lib", __FILE__)
 require "saml_idp/version"
 
 Gem::Specification.new do |s|
-  s.name = %q{saml_idp}
+  s.name = %q{icn_saml_idp}
   s.version = SamlIdp::VERSION
   s.platform = Gem::Platform::RUBY
   s.authors = ["Jon Phenow"]
   s.email = %q{jon.phenow@sportngin.com}
-  s.homepage = %q{http://github.com/sportngin/saml_idp}
+  s.homepage = %q{http://github.com/icapitalnetwork/saml_idp}
   s.summary = %q{SAML Indentity Provider in ruby}
   s.description = %q{SAML IdP (Identity Provider) library in ruby}
   s.date = Time.now.utc.strftime("%Y-%m-%d")
@@ -40,6 +40,11 @@ defaults in a Production environment. Post any issues you to github.
 
 Encrypted Assertions require the xmlenc gem. See the example in the Controller
 section of the README.
+
+** New in Version 0.4.1 **
+
+Some standards were not being followed, so the repo was forked to increase compliance.
+
   INST
 
   s.add_dependency('activesupport', '>= 3.2')
