@@ -122,7 +122,7 @@ module SamlIdp
     end
 
     def default_algorithm
-      OpenSSL::Digest::SHA256
+      :sha256
     end
   end
 end
