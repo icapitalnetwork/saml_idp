@@ -4,7 +4,7 @@ module SamlIdp
       algorithm_check = raw_algorithm || SamlIdp.config.algorithm
       return algorithm_check if algorithm_check.respond_to?(:digest)
       begin
-        OpenSSL::Digest.const_get(algorithm_check.to_s.upcase)
+        OpenSSL::Digest.const_get(algorithm_check.to_s)
       rescue NameError
         OpenSSL::Digest::SHA1
       end
